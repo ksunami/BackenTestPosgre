@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+	<CollectCoverage>true</CollectCoverage>
+    <CoverletOutputFormat>cobertura</CoverletOutputFormat>
+    <ExcludeByFile>**/Program.cs;**/Migrations/*.cs;**/DependencyInjection/*.cs</ExcludeByFile>
+    <ThresholdLine>70</ThresholdLine>
+    <ThresholdBranch>0</ThresholdBranch>
+    <ThresholdMethod>0</ThresholdMethod>
+    <ThresholdStat>total</ThresholdStat>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="6.*" />
+    <PackageReference Include="Moq" Version="4.*" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="8.*" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.*" />
+    <PackageReference Include="xunit" Version="2.*" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.*" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.*" />
+    <PackageReference Include="coverlet.collector" Version="6.*" />
+	<PackageReference Include="coverlet.msbuild" Version="6.0.4">
+    <PrivateAssets>all</PrivateAssets>
+  </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MarcasAutos.Application\MarcasAutos.Application.csproj" />
+    <ProjectReference Include="..\MarcasAutos.Infrastructure\MarcasAutos.Infrastructure.csproj" />
+    <ProjectReference Include="..\MarcasAutosAPI\MarcasAutos.API.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,6 @@
+@MarcasAutosAPI_HostAddress = http://localhost:5155
+
+GET {{MarcasAutosAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
